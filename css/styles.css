@@ -99,7 +99,7 @@ nav ul li a:hover {
 
   /* Create a dark overlay over the image */
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('../images/disney.jpg');
+    url('/images/disney.jpg');
 
   /* Image will stay in place while all other elements of the page will scroll over it */
   background-attachment: fixed;
