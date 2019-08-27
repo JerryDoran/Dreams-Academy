@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Dreams Academy of Theater</title>
+
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- NAV BAR -->
+    <nav class="navbar">
+      <span class="open-slide">
+        <a href="#" onclick="openSideMenu()">
+          <svg width="30" height="30">
+            <path d="M0,5 30,5" stroke="#fff" stroke-width="3" />
+            <path d="M0,14 30,14" stroke="#fff" stroke-width="3" />
+            <path d="M0,23 30,23" stroke="#fff" stroke-width="3" />
+          </svg>
+        </a>
+      </span>
+
+      <div class="navbar-nav">
+        <h1 class="logo">
+          DREAMS <span class="logo-small">Academy of Theater</span>
+        </h1>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="side-menu" class="side-nav">
+      <a href="#" class="btn-close" onclick="closeSideMenu()">&times;</a>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <!-- BANNER SECTION -->
+    <header id="banner">
+      <div class="banner-title">
+        <h1 class="banner-text">
+          DREAMS <span class="banner-text-small">Academy of Theater</span>
+        </h1>
+        <div class="banner-underline"></div>
+        <div class="banner-btn">
+          <button type="button">About Us</button>
+        </div>
+      </div>
+    </header>
+
+    <script>
+      function openSideMenu() {
+        document.getElementById('side-menu').style.width = '250px';
+        document.getElementById('main').style.marginLeft = '250px';
+      }
+
+      function closeSideMenu() {
+        document.getElementById('side-menu').style.width = '0';
+        document.getElementById('main').style.marginLeft = '0';
+      }
+    </script>
+  </body>
+</html>

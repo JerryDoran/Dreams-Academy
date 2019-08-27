@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Raleway:300,400,500,700&display=swap');
+
+/* GLOBAL STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  /* font-family: 'Kaushan Script', cursive; */
+}
+
+/******************************************* NAV BAR ****************************************/
+.logo-small {
+  font-size: 1rem;
+}
+
+.navbar {
+  background: #191716;
+  overflow: hidden;
+  height: 63px;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar ul {
+  margin: 8px 0 0 0;
+  list-style: none;
+}
+
+.logo {
+  margin-top: 19px;
+  margin-left: 19px;
+  color: white;
+  display: inline-block;
+}
+
+.logo:hover {
+  color: pink;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul li a:hover {
+  color: pink;
+}
+
+.side-nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  opacity: 0.9;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+.side-nav a {
+  padding: 10px 10px 10px 30px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #ccc;
+  display: block;
+  transition: 0.3s;
+}
+
+.side-nav a:hover {
+  color: pink;
+}
+
+.side-nav .btn-close {
+  position: absolute;
+  top: 0;
+  right: 22px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/************************************** BANNER SECTION ************************************/
+#banner {
+  min-height: 90vh;
+
+  /* Create a dark overlay over the image */
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('/images/disney.jpg');
+
+  /* Image will stay in place while all other elements of the page will scroll over it */
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+
+  /* Align items vertically in the center of the banner div */
+  align-items: center;
+
+  /* Align items horizontally in the center of the banner div */
+  justify-content: center;
+}
+
+.banner-text {
+  font-size: 4rem;
+  color: white;
+  text-align: center;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.banner-text-small {
+  font-size: 3rem;
+  align-self: flex-end;
+}
+
+.banner-underline {
+  width: 400px;
+  border: 1px solid white;
+  margin: 10px auto 20px auto;
+}
+
+.banner-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.banner-btn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.banner-btn button {
+  font-size: 1.5rem;
+  padding: 15px;
+  text-transform: uppercase;
+  margin: 0 10px;
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 40px;
+}
+
+.banner-btn button:hover {
+  color: black;
+  background: pink;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 685px) {
+  .navbar-nav {
+    display: none;
+  }
+
+  .banner-text {
+    font-size: 3rem;
+  }
+
+  .banner-text-small {
+    font-size: 2rem;
+  }
+
+  .banner-btn button {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  .banner-underline {
+    width: 300px;
+  }
+}
+
+@media (min-width: 685px) {
+  .open-slide {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  ul li {
+    flex: 1 0 auto;
+  }
+}
