@@ -95,7 +95,7 @@ nav ul li a:hover {
 
 /************************************** BANNER SECTION ************************************/
 #banner {
-  min-height: 90vh;
+  min-height: 100vh;
 
   /* Create a dark overlay over the image */
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -162,6 +162,85 @@ nav ul li a:hover {
   background: pink;
 }
 
+/************************************** ABOUT SECTION ************************************/
+.about {
+  min-height: 100vh;
+  padding: 80px 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../images/showcase.jpg') center/cover fixed no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-card {
+  background: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  padding: 60px 40px;
+}
+
+.about-card h3 {
+  font-size: 3.5rem;
+  text-transform: capitalize;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.about-card .fa-theater-masks {
+  font-size: 4.5rem;
+  color: purple;
+  margin: 20px 0;
+}
+
+.about-card .main {
+  line-height: 1.5;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.about-us {
+  list-style: none;
+  font-weight: 500;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.about .main {
+  margin-bottom: 2rem;
+}
+
+.counters {
+  width: 100%;
+  text-align: left;
+}
+
+.counters p {
+  text-align: left !important;
+  display: inline-block;
+  width: 100%;
+  line-height: 1.5;
+  margin-left: 35px;
+}
+
+.counters h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 10px 0;
+}
+
+.counters .section::before {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f630';
+  display: inline-block;
+  padding-right: 10px;
+  vertical-align: middle;
+  font-weight: 900;
+  color: purple;
+  font-size: 20px;
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 685px) {
   .navbar-nav {
@@ -199,5 +278,15 @@ nav ul li a:hover {
 
   ul li {
     flex: 1 0 auto;
+  }
+
+  .about-card {
+    max-width: 60%;
+    border-radius: 30px;
+  }
+
+  .about-card .main {
+    max-width: 70%;
+    margin: 2rem auto;
   }
 }
