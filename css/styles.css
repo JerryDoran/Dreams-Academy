@@ -12,6 +12,10 @@ body {
   /* font-family: 'Kaushan Script', cursive; */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /******************************************* NAV BAR ****************************************/
 .logo-small {
   font-size: 1rem;
@@ -21,6 +25,8 @@ body {
   background: #191716;
   overflow: hidden;
   height: 63px;
+  position: fixed;
+  width: 100%;
 }
 
 .navbar a {
@@ -141,9 +147,19 @@ nav ul li a:hover {
 }
 
 .banner-btn {
-  display: flex;
-  justify-content: space-between;
   margin-top: 40px;
+}
+.banner-btn a {
+  text-decoration: none;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 1.5rem;
+}
+
+.banner-btn a:hover {
+  background: pink;
+  color: #191716;
 }
 
 .banner-btn button {
@@ -204,7 +220,6 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  text-align: left;
 }
 
 .about .main {
@@ -241,12 +256,92 @@ nav ul li a:hover {
   font-size: 20px;
 }
 
+/************************************** CONTACT SECTION ************************************/
+.contact {
+  min-height: 90vh;
+  background: url('/images/dolls.jpg') center/cover fixed no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.company-info {
+  max-width: 75%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ccc;
+  padding: 3rem 2rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.company-info .fa {
+  padding-right: 10px;
+}
+
+.company-info li {
+  margin: 20px 0;
+  font-size: 1.5rem;
+}
+
+.company-info ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.company-info a {
+  text-align: center;
+}
+
+/********************************** FOOTER SECTION ***************************************/
+footer {
+  background: #0d1317;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-icons a {
+  display: inline-block;
+  font-size: 30px;
+  margin: 0 10px 20px 10px;
+  padding: 2px 5px;
+  border-radius: 5px;
+  background: #f5f3f5;
+  color: #0d1317;
+  transition: all 0.5s ease-in;
+}
+
+.footer-icons a:hover {
+  background-color: pink;
+}
+
+footer p {
+  color: #f5f3f5;
+  font-size: 20px;
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 685px) {
-  .navbar-nav {
+  /* .navbar-nav {
+    display: none;
+  } */
+
+  .open-slide {
+    display: none;
+  }
+  .logo {
     display: none;
   }
 
+  .navbar-nav {
+    display: inline;
+  }
   .banner-text {
     font-size: 3rem;
   }
@@ -288,5 +383,26 @@ nav ul li a:hover {
   .about-card .main {
     max-width: 70%;
     margin: 2rem auto;
+  }
+}
+
+@media (max-width: 869px) {
+  .company-info li {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .company-info {
+    width: 90%;
+  }
+}
+@media (max-width: 555px) {
+  .company-info li {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .company-info {
+    width: 90%;
   }
 }

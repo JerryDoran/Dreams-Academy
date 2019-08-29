@@ -36,17 +36,17 @@
         </h1>
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
 
     <div id="side-menu" class="side-nav">
-      <a href="#" class="btn-close" onclick="closeSideMenu()">&times;</a>
+      <a href="" class="btn-close" onclick="closeSideMenu()">&times;</a>
       <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </div>
 
     <!------------------------------------ BANNER SECTION --------------------------------------->
@@ -57,13 +57,13 @@
         </h1>
         <div class="banner-underline"></div>
         <div class="banner-btn">
-          <button type="button">About Us</button>
+          <a href="#about">About Us</a>
         </div>
       </div>
     </header>
 
     <!------------------------------------ ABOUT SECTION ---------------------------------------->
-    <section class="about">
+    <section id="about" class="about">
       <article class="about-card">
         <h3>about us</h3>
         <i class="fas fa-theater-masks"></i>
@@ -106,6 +106,30 @@
       </article>
     </section>
 
+    <!------------------------------------ CONTACT SECTION -------------------------------------->
+    <section id="contact" class="contact">
+      <div class="company-info">
+        <h3>Contact Us</h3>
+        <ul>
+          <li>
+            <i class="fa fa-road"></i>3507 Canfield Rd, Suite 8, Youngstown, OH
+            44511
+          </li>
+          <li><i class="fa fa-phone"></i>330-423-7175</li>
+          <li>
+            <i class="fa fa-envelope"></i> dreams.academyoftheater@gmail.com
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!------------------------------------ FOOTER SECTION ------------------------------------>
+    <footer>
+      <div class="footer-icons">
+        <a href=""><i class="fab fa-facebook"></i></a>
+      </div>
+      <p>Copyright &copy; DREAMS Academy Of Theater. All rights reserved</p>
+    </footer>
     <script>
       function openSideMenu() {
         document.getElementById('side-menu').style.width = '250px';
