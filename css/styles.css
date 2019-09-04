@@ -246,7 +246,7 @@ nav ul li a:hover {
 }
 
 .counters .section::before {
-  font-family: 'Font Awesome 5 Free';
+  font-family: 'Font Awesome 5 Pro';
   content: '\f630';
   display: inline-block;
   padding-right: 10px;
